@@ -1,6 +1,6 @@
 <?php
 	if($_GET['en1']){
-		$email = $_GET['en1'];
+		$email = decryptIt($_GET['en1']);
 		$table = 'festDetail';
         $host = "localhost";
 		$dbusername = "root";
@@ -12,18 +12,16 @@
 			die('Connect Error ('.mysqli_connect_error().')'.mysqli_connect_error());
 		}
 		else{
-			$sql = "SELECT emailVerification FROM `" . $table . "` WHERE email = '$email'";
+			$sql = "SELECT * FROM `".$table."` WHERE email = '$email'";
 			if ($conn->query($sql)) {
 				$result = $conn->query($sql);
 				$row = mysqli_fetch_array($result);
-				if($row['emailVerification'] != "Not Verified"){
+				if($row['emailVerification'] == "Not Verified"){
 					$sql1 = "UPDATE `".$table."` SET emailVerification = 'Verified' WHERE email = '$email'";
 					if($conn->query($sql1)){
-						echo $row['emailVerification'].$table.$email;
-						/*echo '<script language="javascript">';
+						echo '<script language="javascript">';
 						echo 'alert("Fest.0"+ "\n"  +  "Your email is verified successfully"); window.location.href = "email.html"';
 						echo '</script>';
-						*/
 						
 					}
 					else{
@@ -33,11 +31,9 @@
 					}	
 				}
 				else{
-					echo $email;
-					
-					/*echo '<script language="javascript">';
+					echo '<script language="javascript">';
 					echo 'alert("Fest.0"+ "\n"  +  "Your email is already verified."); window.location.href = "index.html"';
-					echo '</script>';*/
+					echo '</script>';
 					
 				}	
 			}
