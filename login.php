@@ -1,7 +1,41 @@
 <?php
 	$email = filter_input(INPUT_POST, 'email');
 	$password = encryptIt(filter_input(INPUT_POST, 'password'));
-	
+	$login = filter_input(INPUT_POST, 'login');
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+		$host = "localhost";
+		$dbusername = "root";
+		$dbpassword = "";
+		$dbname = "fest_registration";
+		$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
+		if(mysqli_connect_error())
+		{
+			die('Connect Error ('.mysqli_connect_error().')'.mysqli_connect_error());
+		}	
+		else{
+			$table = "festDetail";
+			$sql1 = "SELECT * FROM `".$table."` WHERE email = '$email'";
+			$result = $conn->query($sql1);
+			if($result->num_rows > 0){
+				echo '<script language="javascript">';
+				echo 'alert("Successfull login")';
+				echo '</script>';
+			}
+			else{
+				echo "Error: ". $sql1 ."<br>". $conn->error;
+			}	
+		}
+		$conn->close();		
+	}	
+	function encryptIt( $q ) {
+		$ciphering = "AES-128-CTR";
+		$iv_length = openssl_cipher_iv_length($ciphering); 
+		$options = 0; 
+		$encryption_iv = '1234567891011121'; 
+		$encryption_key = "YourFest2020";
+		$encryption = openssl_encrypt($q, $ciphering, $encryption_key, $options, $encryption_iv); 
+		return ($encryption);
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +71,7 @@
 					</div>
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method = "post" action = "login.php">
 					<span class="login100-form-title">
 						Blitz Login
 					</span>
@@ -59,7 +93,7 @@
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn" type = "submit" value = "login" name = "login">
 							Login
 						</button>
 					</div>
