@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>preloader</title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div id="loading"><img src = "images/preloader.gif"></div>
+<style>
+#loading{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: #000;
+  color: white;
+  opacity: 1;
+  transition: 0.5s;
+  visibility: visible;
+}
+#loading img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#loading.hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+</style>
+<script>
+setTimeout(function() {
+  $('#loading').addClass('hidden');
+}, 3000);
+
+</script>
+
+</html>

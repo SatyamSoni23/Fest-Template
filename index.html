@@ -30,11 +30,74 @@
    <!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="p.png" >
+	
+	<style>
+	/* width */
+	::-webkit-scrollbar {
+	  width: 10px;
+	}
 
+	/* Track */
+	::-webkit-scrollbar-track {
+	  box-shadow: inset 0 0 5px grey; 
+	  border-radius: 10px;
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #790D00; 
+	  border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+	  background: #b30000; 
+	}
+</style>
 </head>
 
 <body>
+   <!-- Preloader
+   ================================================== -->
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<div id="loading"><img src = "images/preloader1.gif"></div>
+	<style>
+	#loading{
+	  position: fixed;
+	  height: 100%;
+	  top:0;
+	  left:0;
+	  right:0;
+	  bottom:0;
+	  background-color: #000;
+	  color: white;
+	  
+	  transition: 0.5s;
+	  z-index: 999999;
+	}
+	#loading img{
+	  height: 350px;
+	  width: 350px;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  top: 35%;
+	  left: 45%;
+	  position: absolute;
+      margin: -100px 0 0 -100px;
+	}
+	#loading.hidden{
+	  opacity: 0;
+	  visibility: hidden;
+	}
+	</style>
+	<script>
+	setTimeout(function() {
+	  $('#loading').addClass('hidden');
+	}, 2000);
+
+	</script>
    <!-- Header
    ================================================== -->
    <header id="home">
@@ -51,6 +114,8 @@
 			<li><a class="smoothscroll" href="#stats">Stats</a></li>
             <li><a class="smoothscroll" href="#events">Events</a></li>
             <li><a class="smoothscroll" href="#contact">Contact</a></li>
+			<li><a href="register.php">Register</a></li>
+			<li><a href="login.php">Login</a></li>
          </ul> <!-- end #nav -->
 
       </nav> <!-- end #nav-wrap -->
@@ -344,19 +409,19 @@
 			<div class="one columns">
 
                   <div>
-					  <h3><a href = "#">Register</a></h3>
-                      <h3><a href = "#">Home</a></h3>
-                      <h3><a href = "#">About</a></h3>
-					  <h3><a href = "#">Theme</a></h3>
+					  <h3><a href = "register.php">Register</a></h3>
+                      <h3><a href = "#home">Home</a></h3>
+                      <h3><a href = "#about">About</a></h3>
+					  <h3><a href = "#theme">Theme</a></h3>
 					  <h3><a href = "#">Team</a></h3>
                   </div>
 			</div>
 			<div class="one columns">
 
                   <div>
-				      <h3><a href = "#">Login</a></h3>
-                      <h3><a href = "#">Events</a></h3>
-                      <h3><a href = "#">Contact</a></h3>
+				      <h3><a href = "login.php">Login</a></h3>
+                      <h3><a href = "#events">Events</a></h3>
+                      <h3><a href = "#contact">Contact</a></h3>
 					  <h3><a href = "#">Sponsors</a></h3>
 					  <h3><a href = "#">FAQ</a></h3>
                   </div>

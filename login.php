@@ -61,7 +61,47 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
+	<!-- Preloader
+   ================================================== -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<div id="loading"><img src = "images/preloader1.gif"></div>
+	<style>
+	#loading{
+	  position: fixed;
+	  height: 100%;
+	  top:0;
+	  left:0;
+	  right:0;
+	  bottom:0;
+	  background-color: #000;
+	  color: white;
+	  
+	  transition: 0.5s;
+	  z-index: 999999;
+	}
+	#loading img{
+	  height: 350px;
+	  width: 350px;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  top: 35%;
+	  left: 45%;
+	  position: absolute;
+      margin: -100px 0 0 -100px;
+	}
+	#loading.hidden{
+	  opacity: 0;
+	  visibility: hidden;
+	}
+	</style>
+	<script>
+	setTimeout(function() {
+	  $('#loading').addClass('hidden');
+	}, 2000);
+
+	</script>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
