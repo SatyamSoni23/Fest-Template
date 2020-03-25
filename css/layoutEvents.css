@@ -1,0 +1,568 @@
+/*
+=====================================================================
+
+   TOC:
+   a. General Styles
+   b. Header Styles
+   c. About Section
+   d. theme Section
+   e. events Section
+   f. Call To Action Section
+   g. Testimonials Section
+   h. Contact Section
+   i. Footer
+	
+===================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* a. General Styles
+/* ------------------------------------------------------------------ */
+
+body { background: #0f0f0f; }
+/* ------------------------------------------------------------------ */
+/* Preloader
+/* ------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------ */
+/* b. Header Styles
+/* ------------------------------------------------------------------ */
+
+header {
+   position: relative;
+   height: 800px;
+   min-height: 500px;
+   width: 100%;
+   background: #161415 url("../images/events.jpg") no-repeat top center;
+   background-size: cover !important;
+	-webkit-background-size: cover !important;
+   text-align: center;
+   overflow: hidden;
+}
+
+/* vertically center banner section */
+header:before {
+   content: '';
+   display: inline-block;
+   vertical-align: middle;
+   height: 100%;
+}
+header .banner {
+   display: inline-block;
+   vertical-align: top;
+   margin: 0 auto;
+   width: 90%;
+   padding-top: 40px;
+   padding-bottom: 20px;
+   text-align: center;
+}
+
+/* primary navigation
+--------------------------------------------------------------------- */
+#nav-wrap ul, #nav-wrap li, #nav-wrap a {
+	 margin: 0;
+	 padding: 0;
+	 border: none;
+	 outline: none;
+}
+
+/* nav-wrap */
+#nav-wrap {
+   font: 12px 'opensans-bold', sans-serif;
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   margin: 0 auto;
+   z-index: 100;
+   position: fixed;
+   left: 0;
+   top: 0;
+}
+.opaque { background-color: #330702; }
+
+/* hide toggle button */
+#nav-wrap > a.mobile-btn { display: none; }
+
+ul#nav {
+   min-height: 48px;
+   width: auto;
+
+   /* center align the menu */
+   text-align: center;
+}
+ul#nav li {
+   position: relative;
+   list-style: none;
+   height: 48px;
+   display: inline-block;
+}
+
+/* Links */
+ul#nav li a {
+
+/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
+
+   display: inline-block;
+   padding: 8px 13px;
+   line-height: 32px;
+	text-decoration: none;
+   text-align: left;
+   color: #fff;
+
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+}
+
+ul#nav li a:active { background-color: transparent !important; }
+ul#nav li.current a { color: #F06000; }	
+
+.rightButton{
+	background-color: #330702;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #330702;
+	font-family: serif;
+	border-radius:5px; 
+	margin-top: 5px; 
+	margin-right: 5px;  
+	line-height: 20px;
+
+}	
+#rightButton:hover{
+	background: #fefefe;
+}	
+	
+/* ------------------------------------------------------------------ */
+/* e. flip
+/* ------------------------------------------------------------------ */
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #fefefe;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow-y: hidden;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 8px;
+  
+}
+	
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #330702;
+  color: black;
+  opacity: 0.9;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #330702;
+  color: white;
+  transform: rotateY(180deg);
+
+  
+}
+.flip-card-back h1{
+  font: 18px/22px sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  color: #fefefe;
+}	
+	
+.flip-card-back p{
+  font: 16px/20px 'librebaskerville-italic', serif;
+  letter-spacing: 1px;
+  color: #fefefe;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  
+  
+}
+.cardLi{
+  font: 16px/20px 'librebaskerville-italic', serif;
+  left: 0;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 1.2em;
+}	
+.eventReg{
+  background: 
+  align: center;
+  margin-top: 10px;
+}
+
+/* ------------------------------------------------------------------ */
+/* h. Horizontal Scrolling
+/* ------------------------------------------------------------------ */
+
+    
+
+:root {
+  --gutter: 20px;
+}
+
+.app {
+  padding: var(--gutter) 0;
+  display: grid;
+  grid-gap: var(--gutter) 0;
+  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  align-content: start;
+}
+
+.app h1 {
+   font: 32px/40px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   padding-bottom: 20px;
+   color: #fefefe;
+}
+.app h1 span {
+   border-bottom: 3px solid #11ABB0;
+}
+
+.app > * {
+  grid-column: 2 / -2;
+}
+
+.app > .full {
+  grid-column: 1 / -1;
+}
+
+.hs {
+
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: repeat(6, calc(45% - var(--gutter) * 2));
+  grid-template-rows: minmax(500px, 1fr);
+  
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+}
+
+/* Demo styles */
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+
+.hs > li,
+.item {
+  background: #fefefe;
+  scroll-snap-align: center;
+  padding: calc(var(--gutter) / 2 * 1.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.itemEvents{
+  background: transparent;
+  scroll-snap-align: center;
+  padding: calc(var(--gutter) / 2 * 1.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}	
+
+
+/* ------------------------------------------------------------------ */
+/* h. Contact Section
+/* ------------------------------------------------------------------ */
+
+#contact {
+   background: #000000;
+   padding-top: 96px;
+   padding-bottom: 102px;
+   color: #636363;
+}
+#contact .section-head { margin-bottom: 42px; }
+
+#contact a, #contact a:visited  { color: #fff; }
+#contact a:hover, #contact a:focus { color: #11ABB0; }
+
+#contact h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   color: #fefefe;
+   margin-bottom: 6px;
+}
+#contact h1 span { display: none; }
+#contact h1:before {
+   font-family: 'FontAwesome';
+   content: "\f0e0";
+	padding-right: 10px;
+	font-size: 72px;
+   line-height: 72px;
+   text-align: left;
+   float: left;
+   color: #ebeeee;
+}
+
+#contact h4 {
+   font: 16px/24px 'opensans-bold', sans-serif;
+   color: #EBEEEE;
+   margin-bottom: 6px;
+}
+
+#contact h3{
+   font: 16px/24px 'librebaskerville-italic', serif;
+   color: #EBEEEE;
+   margin-bottom: 6px;
+   padding-top: 10px;
+}	
+#contact p.lead {
+   font: 18px/36px 'opensans-light', sans-serif;
+   padding-right: 3%;
+}
+#contact .header-col { padding-top: 6px; }
+
+
+/* contact form */
+#contact form { margin-bottom: 30px; }
+#contact label {
+   font: 15px/24px 'opensans-bold', sans-serif;
+   margin: 12px 0;
+   color: #EBEEEE;
+	display: inline-block;
+	float: left;
+   width: 26%;
+}
+#contact input,
+#contact textarea,
+#contact select {
+   padding: 18px 20px;
+	color: #eee;
+	background: #373233;
+	margin-bottom: 42px;
+	border: 0;
+	outline: none;
+   font-size: 15px;
+   line-height: 24px;
+   width: 65%;
+}
+#contact input:focus,
+#contact textarea:focus,
+#contact select:focus {
+	color: #fff;
+	background-color: #11ABB0;
+}
+#contact button.submit {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color:#fff;
+   background: #0D0D0D;
+	border: none;
+   cursor: pointer;
+   height: auto;
+   display: inline-block;
+	border-radius: 3px;
+   margin-left: 26%;
+}
+#contact button.submit:hover {
+	color: #0D0D0D;
+	background: #fff;
+}
+#contact span.required {
+	color: #11ABB0;
+	font-size: 13px;
+}
+
+#contact video{
+	height: auto;
+	width: 450px;
+	border-radius: 50px;
+	border: 5px solid #330702;
+	box-shadow: -1rem 0 1rem #440702;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+}
+
+#contact video:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+	
+#message-warning, #message-success {
+   display: none;
+	background: #0F0F0F;
+	padding: 24px 24px;
+	margin-bottom: 36px;
+   width: 65%;
+   margin-left: 26%;
+}
+#message-warning { color: #D72828; }
+#message-success { color: #11ABB0; }
+
+#message-warning i,
+#message-success i {
+   margin-right: 10px;
+}
+#image-loader {
+   display: none;
+   position: relative;
+   left: 18px;
+   top: 17px;
+}
+
+
+/* Twitter Feed */
+#twitter {
+   margin-top: 12px;
+   padding: 0;
+}
+#twitter li {
+   margin: 6px 0px 12px 0;
+   line-height: 30px;
+}
+#twitter li span {
+   display: block;
+}
+#twitter li b a {
+   font: 13px/36px 'opensans-regular', Sans-serif;
+   color: #474747 !important;
+   border: none;
+}
+
+
+/* ------------------------------------------------------------------ */
+/* i. Footer
+/* ------------------------------------------------------------------ */
+
+footer {
+   padding-top: 48px;
+   margin-bottom: 48px;
+   color: #303030;
+   font-size: 14px;
+   text-align: center;
+   position: relative;
+}
+
+footer a, footer a:visited { color: #525252; }
+footer a:hover, footer a:focus { color: #fff; }
+
+/* copyright */
+footer .copyright {
+    margin: 0;
+    padding: 0;
+ }
+footer .copyright li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+}
+.ie footer .copyright li {
+   display: inline;
+}
+footer .copyright li:before {
+    content: "\2022";
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #095153;
+}
+footer .copyright  li:first-child:before {
+    display: none;
+}
+
+/* social links */
+footer .social-links {
+   margin: 18px 0 30px 0;
+   padding: 0;
+   font-size: 30px;
+}
+footer .social-links li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-left: 42px;
+    color: #F06000;
+}
+footer .social-links li a { color: #790D00; }
+
+footer .social-links li:first-child { margin-left: 0; }
+footer .social-links li a:hover { color: #11ABB0; }
+
+/* Go To Top Button */
+#go-top {
+	position: absolute;
+	top: -24px;
+   left: 50%;
+   margin-left: -30px;
+}
+#go-top a {
+	text-decoration: none;
+	border: 0 none;
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-color: #525252;
+
+	-webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+
+   color: #fff;
+   font-size: 21px;
+   line-height: 60px;
+ 	border-radius: 100%;
+}
+#go-top a:hover { background-color: #0F9095; }

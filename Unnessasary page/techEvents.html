@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Purv</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+    <!-- Script
+    ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="p.png" >
+	
+	<style>
+	/* width */
+	::-webkit-scrollbar {
+	  width: 10px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+	  box-shadow: inset 0 0 5px grey; 
+	  border-radius: 10px;
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #790D00; 
+	  border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+	  background: #b30000; 
+	}
+	
+	
+</style>
+</head>
+
+<body>
+   <div class="background"></div>
+<div id="curve" class="card">
+    <div class="footer">
+        <div class="connections">
+            <div class="connection facebook"><div class="icon"></div></div>
+            <div class="connection twitter"><div class="icon"></div></div>
+            <div class="connection behance"><div class="icon"></div></div>
+        </div>
+        <svg id="curve">
+            <path id="p" d="M0,200 Q80,100 400,200 V150 H0 V50" transform="translate(0 300)" />
+            <rect id="dummyRect" x="0" y="0" height="450" width="400"
+		  fill="transparent" />
+            <!-- slide up-->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,100 400,50 V150 H0 V50" fill="freeze" begin="dummyRect.mouseover" end="dummyRect.mouseout" dur="0.1s" id="bounce1" />
+            <!-- slide up and curve in -->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,0 400,50 V150 H0 V50" fill="freeze" begin="bounce1.end" end="dummyRect.mouseout" dur="0.15s" id="bounce2" />
+            <!-- slide down and curve in -->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,80 400,50 V150 H0 V50" fill="freeze" begin="bounce2.end" end="dummyRect.mouseout" dur="0.15s" id="bounce3" />
+            <!-- slide down and curve out -->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,45 400,50 V150 H0 V50" fill="freeze" begin="bounce3.end" end="dummyRect.mouseout" dur="0.1s" id="bounce4" />
+            <!-- curve in -->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,50 400,50 V150 H0 V50" fill="freeze" begin="bounce4.end" end="dummyRect.mouseout" dur="0.05s" id="bounce5" />
+
+            <animate xlink:href="#p" attributeName="d" to="M0,200 Q80,100 400,200 V150 H0 V50" fill="freeze" begin="dummyRect.mouseout" dur="0.15s" id="bounceOut" />
+        </svg>
+        <div class="info">
+            <div class="name">Filan Fisteku</div>
+            <div class="job">Architect Manager</div>
+        </div>
+    </div>
+    <div class="card-blur"></div>
+</div>
+<style>
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.background {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    height: 120%;
+    width: 120%;
+    background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(30px);
+    filter: blur(30px);
+}
+
+.card {
+    position: absolute;
+    border-radius: 8px;
+    height: 450px;
+    width: 400px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(https://en.gravatar.com/userimage/41376643/06aacd04e8702b61ce87ef3c1b36da3a.jpg?size=720);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 80px -10px black;
+    overflow: hidden;
+}
+
+.card-blur {
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 1px);
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+}
+
+.card:hover .card-blur {
+    opacity: 0.6;
+}
+
+.footer {
+    z-index: 1;
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    bottom: 0;
+}
+
+svg#curve {
+    position: absolute;
+    fill: white;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    height: 450px;
+}
+
+.connections {
+    height: 80px;
+    width: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: auto;
+}
+
+.connection {
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    background-color: white;
+    display: inline-block;
+    padding: 5px;
+    margin-right: 25px;
+    transform: translateY(200px);
+    
+    transition: transform 1s cubic-bezier(.46, 1.48, .18, .81);
+}
+
+.card:hover .connection {
+    transform: translateY(0px);
+}
+
+.connection.facebook {
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.connection.twitter {
+    transition-delay: 0.02s;
+}
+
+.connection.behance {
+    transition-delay: 0.04s;
+}
+
+.connection.facebook .icon {
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    margin-left: 4px;
+    background-image: url(https://www.xink.io/wp-content/themes/xink/assets/images/icons/black/64/facebook_001.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.connection.twitter .icon {
+    height: 100%;
+    width: 100%;
+    background-image: url(https://www.xink.io/wp-content/themes/xink/assets/images/icons/black/64/instagram_001.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.connection.behance .icon {
+    height: 100%;
+    width: 100%;
+    background-image: url(https://www.xink.io/wp-content/themes/xink/assets/images/icons/black/64/twitter_001.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.info {
+	font-family: Inconsolata;
+    padding-left: 20px;
+    transform: translateY(250px);
+
+    transition: transform 1s cubic-bezier(.31,1.21,.64,1.02);
+}
+
+.card:hover .info {
+    transform: translateY(0px);
+}
+
+.name {
+    font-weight: bolder;
+    padding-top: 5px;
+}
+
+.job {
+    margin-top: 10px;
+}
+</style>
+</body>
+
+</html>

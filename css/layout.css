@@ -179,9 +179,27 @@ ul#nav li a {
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #F06000; }
+ul#nav li.current a { color: #F06000; }	
 
+.rightButton{
+	background-color: #330702;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #330702;
+	font-family: serif;
+	border-radius:5px; 
+	margin-top: 5px; 
+	margin-right: 5px;  
+	line-height: 20px;
 
+}	
+#rightButton:hover{
+	background: #fefefe;
+}	
+	
+}	
 /* ------------------------------------------------------------------ */
 /* c. About Section
 /* ------------------------------------------------------------------ */

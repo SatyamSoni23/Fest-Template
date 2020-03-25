@@ -17,9 +17,37 @@
 			$sql1 = "SELECT * FROM `".$table."` WHERE email = '$email'";
 			$result = $conn->query($sql1);
 			if($result->num_rows > 0){
+				$row = mysqli_fetch_array($result);
+				$id = $row['id'];
+				$email = $row['email'];
+				$name = $row['name'];
+				$phone = $row['phone'];
+				$colid = $row['colid'];
+				$course = $row['course'];
+				$branch = $row['branch'];
+				$collegeName = $row['collegeName'];
+				$city = $row['city'];
+				$accommodation = $row['accommodation'];
+				$emailVerification = $row['emailVerification'];
+				session_start();
+				$_SESSION['id'] = $id;
+				$_SESSION['email'] = $email;
+				$_SESSION['name'] = $name;
+				$_SESSION['phone'] = $phone;
+				$_SESSION['colid'] = $colid;
+				$_SESSION['course'] = $course;
+				$_SESSION['year'] = $year;
+				$_SESSION['branch'] = $branch;
+				$_SESSION['collegeName'] = $collegeName;
+				$_SESSION['city'] = $city;
+				$_SESSION['accommodation'] = $accommodation;
+				$_SESSION['emailVerification'] = $emailVerification;
+				
 				echo '<script language="javascript">';
 				echo 'alert("Successfull login")';
 				echo '</script>';
+				header('Location: index.php');
+				
 			}
 			else{
 				echo "Error: ". $sql1 ."<br>". $conn->error;
@@ -44,7 +72,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="shortcut icon" href="p.png" >
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->

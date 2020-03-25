@@ -116,11 +116,38 @@
             <li><a class="smoothscroll" href="#events">Events</a></li>
             <li><a class="smoothscroll" href="#contact">Contact</a></li>
 			<li><a href="register.php">Register</a></li>
-			<li><a href="login.php">Login</a></li>
          </ul> <!-- end #nav -->
 
       </nav> <!-- end #nav-wrap -->
-	
+	<?php
+		$login = filter_input(INPUT_POST, 'login');
+		session_start();
+		$username = $_SESSION['name'];
+		if(!empty($username)){
+			/*echo "<form method = 'post'><input type='submit' style = 'color:#fff; position: absolute; top:0; right: 0; background-color:#330702; font-family: serif; border-radius:5px; margin-top: 5px; margin-right: 5px;'value='Hello $username' name='logout'></form>";*/
+			echo "<form method = 'post'><input type='submit' name='logout' class='rightButton' value='Hello $username' style = 'background-color: #330702; font-family: serif;'/></form>";
+			$logout = filter_input(INPUT_POST, 'logout');
+			if(array_key_exists('logout', $_POST)) { 
+				session_destroy();
+				$_SESSION = array();
+				header('Location: index.php'); 
+			}
+			/*$logout = filter_input(INPUT_POST, 'logout');
+			if($_SERVER["REQUEST_METHOD"] == "POST"){
+				if($logout == 'logout'){
+					session_destroy();
+					$_SESSION = array();
+				}
+			}*/
+		}
+		else{
+			echo '<form method = "post"><input type="submit" name="login" class="rightButton" value="Login" style = "background-color: #330702; font-family: serif;"/></form>';
+			$login = filter_input(INPUT_POST, 'login');
+			if(array_key_exists('login', $_POST)) { 
+				header('Location: login.php'); 
+			} 
+		}
+	?>
       <div class="row banner">
          <div class="banner-text">
             <!--<h1 class="responsive-headline" style = "font-family: Agency fb;">Algotune</h1>
@@ -141,7 +168,8 @@
       <p class="scrolldown">
          <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
       </p>
-
+	
+	
    </header> <!-- Header End -->
 
    <!-- About Section
@@ -269,7 +297,7 @@
 				<h1><span>Events</span></h1>
 				<div class = "pos">
 					<div class="container">
-					  <div class="card">
+					  <div class="card"><a href = "techEvents.html">
 						<h3 class="title">Technical</h3>
 						<div class="bar">
 						  <div class="emptybar"></div>
@@ -282,9 +310,9 @@
 									<circle class="stroke" cx="60" cy="60" r="50"/>
 								</svg>
 							</div>
-						</div>	
+						</div></a>
 					  </div>
-					  <div class="card">
+					  <div class="card"><a href = "#">
 						<h3 class="title">Cultural</h3>
 						<div class="bar">
 						  <div class="emptybar"></div>
@@ -298,9 +326,9 @@
 									<circle class="stroke" cx="60" cy="60" r="50"/>
 								</svg>
 							</div>
-						</div>	
+						</div></a>
 					  </div>
-					  <div class="card">
+					  <div class="card"><a href = "#">
 						<h3 class="title">Proshows</h3>
 						<div class="bar">
 						  <div class="emptybar"></div>
@@ -313,9 +341,9 @@
 									<circle class="stroke" cx="60" cy="60" r="50"/>
 								</svg>
 							</div>
-						</div>	
+						</div></a>	
 					  </div>
-					  <div class="card">
+					  <div class="card"><a href = "#">
 						<h3 class="title">Informals & workshops</h3>
 						<div class="bar">
 						  <div class="emptybar"></div>
@@ -328,7 +356,7 @@
 									<circle class="stroke" cx="60" cy="60" r="50"/>
 								</svg>
 							</div>
-						</div>	
+						</div></a>	
 					  </div>
 					</div>
 				</div>
