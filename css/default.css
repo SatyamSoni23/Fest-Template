@@ -14,7 +14,6 @@ d. Grid
 e. Others
    1. Clearing
    2. Misc
-
 =====================================================================  */
 
 /* ------------------------------------------------------------------ */
@@ -487,7 +486,7 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-   background: #3d4145;
+   background: #11b08d;
    color: #fff;
 }
 
@@ -496,7 +495,7 @@ button:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active {
-   background: #3d4145;
+   background: #11b08d;
    color: #fff;
 }
 
@@ -538,12 +537,18 @@ select {
    min-width: 225px;
 	max-width: 100%;
    font-size: 15px;
-   line-height: 24px;
+   line-height: 15px;
 	color: #647373;
 	background: #D3D9D9;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 
 }
-
+option select{
+    background-color: #fff;
+    color: #000;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+	vertical-align: middle;
+}	
 /* select { padding: 0;
    width: 220px;
    } */
@@ -552,8 +557,8 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-   color: #B3B7BC;
-	background-color: #3d4145;
+   color: #000;
+	background-color: #fff;
 }
 
 textarea { min-height: 220px; }

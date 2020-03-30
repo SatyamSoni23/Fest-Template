@@ -1,3 +1,11 @@
+<?php
+	if(isset($_POST["robowar"])){
+		echo "Hello 1";
+	}
+	else{
+		echo "Hello 2";
+	}	
+?>
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
@@ -118,13 +126,14 @@
             <li><a class="smoothscroll" href="index.php#events">Events</a></li>
             <li><a class="smoothscroll" href="index.php#contact">Contact</a></li>
 			<li><a href="register.php">Register</a></li>
+			<li><a href="login.php">Login</a></li>
          </ul> <!-- end #nav -->
 
       </nav> <!-- end #nav-wrap -->
 	
-<div class="row banner">
+      <div class="row banner">
 
- <div class="app" >
+<div class="app" >
   <h1><span>Technical Events</span></h1>
       <div class = "hs">
 	    <div class = "itemsEvents">
@@ -143,8 +152,9 @@
 						  <li class="cardLi" type="circle"><span>>  Power supply limits to 12 volts.</span></li>
 						  <li class="cardLi" type="circle"><span>>  Participants need to carry their identity card.</span></li>
 					  </ul>
-					  <a href = "EventReg/robowar.php"><Button class = "eventReg" id="myBtn" name = "robowar">Register</Button></a>
-					  
+					  <form method = "post">
+					  <Button class = "eventReg" id="myBtn" name = "robowar" value = "robowar">Register</Button>
+					  <form>
 					</div>
 				</div>
 			 </div>
@@ -269,7 +279,173 @@
 			 </div>
 		</div>	 
 	  </div> 
+  <!--<ul class="hs">
+    <li class="item"><div class = "itemEvents">test</div></li>
+    <li class="item">test</li>
+    <li class="item">test</li>
+    <li class="item">test</li>
+    <li class="item">test</li>
+    <li class="item">test</li>
+  </ul>-->
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------------------------------------------------------------->
+ <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+	<div class="modal-header">
+	  <span class="close">&times;</span>
+	  <h2 class = "modelHead" style = "padding-top: 20px; color: #fefefe; font: 22px/26px 'opensans-bold', sans-serif;">Registration</h2>
 	</div>
+	<div class="modal-body">
+		<form class="Events-Registration-Form" method="post" action="techEvents.php">
+			<center><div class="wrap-input1">
+				<select class="input1" id="teamSize" name="tsize" placeholder="gender" required="true">
+					<option selected="" disabled="" name = "teamsize">Select Team Size</option>
+					<option value="one" class="input102">1</option>
+					<option value="two" class="input102">2</option>
+					<option value="three" class="input102">3</option>
+					<option value="four" class="input102">4</option>
+					<option value="five" class="input102">5</option>
+				</select>
+			</div>
+			<div class = "row">
+				<div class="one columns"></div>
+				<div class="two columns">
+					<p class = "contHead">Fest Id</p>
+				</div>
+				<div class="two columns">
+					<input id = "one" class="input100" type="text" name="email1" placeholder="eg: fest@123" disabled = "true">
+				</div>
+				<div class="one columns"></div>
+				<div class="two columns">
+					<p class = "contHead">Password</p>
+				</div>
+				<div class="two columns">
+					<input id = "onep" class="input101" type="password" name="pass1" placeholder="Password"  disabled = "true">
+				</div>
+				<div class="two columns"></div>
+			</div>
+			<div class = "row">
+				<div class="one columns"></div>
+				<div class="two columns">
+					<p class = "contHead">Fest Id</p>
+				</div>
+				<div class="two columns">
+					<input id = "two" class="input100" type="text" name="email2" placeholder="eg: fest@123" disabled = "true">
+				</div>
+				<div class="one columns"></div>
+				<div class="two columns">
+					<p class = "contHead">Password</p>
+				</div>
+				<div class="two columns">
+					<input id = "twop" class="input101" type="password" name="pass2" placeholder="Password" disabled = "true">
+				</div>
+				<div class="two columns"></div>
+			</div>
+			<div class = "row">
+				<div class="one columns"></div>
+				<div class="two columns">
+					<p class = "contHead">Fest Id</p>
+				</div>
+				<div class="two columns">
+					<input id = "three" class="input100" type="text" name="email3" placeholder="eg: fest@123" disabled = "true">
+				</div>
+				<div class="one columns"></div>
+				<div class="two columns">
+					<p class = "contHead">Password</p>
+				</div>
+				<div class="two columns">
+					<input id = "threep" class="input101" type="password" name="pass3" placeholder="Password" disabled = "true">
+				</div>
+				<div class="two columns"></div>
+			</div>
+			<div class = "row">
+				<div class="one columns"></div>
+				<div class="two columns">
+					<p class = "contHead">Fest Id</p>
+				</div>
+				<div class="two columns">
+					<input id = "four" class="input100" type="text" name="email4" placeholder="eg: fest@123" disabled = "true">
+				</div>
+				<div class="one columns"></div>
+				<div class="two columns">
+					<p class = "contHead">Password</p>
+				</div>
+				<div class="two columns">
+					<input id = "fourp" class="input101" type="password" name="pass4" placeholder="Password" disabled = "true">
+				</div>
+				<div class="two columns"></div>
+			</div>
+			<script>
+				$('#teamSize').change(function() {
+					if( $(this).val() == "one") {
+						$('#one').prop( "disabled", true );
+						$('#two').prop( "disabled", true );
+						$('#three').prop( "disabled", true );
+						$('#four').prop( "disabled", true );
+						
+						$('#onep').prop( "disabled", true );
+						$('#twop').prop( "disabled", true );
+						$('#threep').prop( "disabled", true );
+						$('#fourp').prop( "disabled", true );
+					} 
+					else if($(this).val() == "two"){
+						$('#one').prop( "disabled", false );
+						$('#two').prop( "disabled", true );
+						$('#three').prop( "disabled", true );
+						$('#four').prop( "disabled", true );
+						
+						$('#onep').prop( "disabled", false );
+						$('#twop').prop( "disabled", true );
+						$('#threep').prop( "disabled", true );
+						$('#fourp').prop( "disabled", true );
+					}
+					else if($(this).val() == "three"){
+						$('#one').prop( "disabled", false );
+						$('#two').prop( "disabled", false );
+						$('#three').prop( "disabled", true );
+						$('#four').prop( "disabled", true );
+						
+						$('#onep').prop( "disabled", false );
+						$('#twop').prop( "disabled", false );
+						$('#threep').prop( "disabled", true );
+						$('#fourp').prop( "disabled", true );
+					}
+					else if($(this).val() == "four"){
+						$('#one').prop( "disabled", false );
+						$('#two').prop( "disabled", false );
+						$('#three').prop( "disabled", false );
+						$('#four').prop( "disabled", true );
+						
+						$('#onep').prop( "disabled", false );
+						$('#twop').prop( "disabled", false );
+						$('#threep').prop( "disabled", false );
+						$('#fourp').prop( "disabled", true );
+					}
+					else if($(this).val() == "five"){       
+						$('#one').prop( "disabled", false );
+						$('#two').prop( "disabled", false );
+						$('#three').prop( "disabled", false );
+						$('#four').prop( "disabled", false );
+						
+						$('#onep').prop( "disabled", false );
+						$('#twop').prop( "disabled", false );
+						$('#threep').prop( "disabled", false );
+						$('#fourp').prop( "disabled", false );
+					}
+				});
+			</script>
+			<button class="subBtn" type = "submit" value = "login" name = "login">
+				Register
+			</button>
+			</center>
+		</form>
+	</div>
+  </div>
+
 </div>
  
  

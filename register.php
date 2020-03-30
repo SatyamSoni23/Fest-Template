@@ -60,12 +60,13 @@
 						$row = mysqli_fetch_array($result);
 						$festId = $row['id'];
 						
-						$mail->setFrom('sat.test1000@gmail.com', 'Fest2020'); 
+						$mail->setFrom('sat.test1000@gmail.com', 'Purva20.0'); 
 						$mail->addAddress($email, $name); 
 						$mail->Subject = 'Successfull Registration'; 
-						$mail->Body = "Congratulation, {$name} \t\t\t\t\n You are successfully registered in Fest20.0 \n\t\t your #festName# Id is {$festId}  \n\t\t verify your email http://localhost/fest/email.php?en1={$en1}";
+						$mail->Body = "Congratulation, {$name} \t\t\t\t\n You are successfully registered in Purva20.0 \n\t\t your Purva20.0 Id is {$festId}  \n\t\t verify your email http://localhost/fest/email.php?en1={$en1}";
 						if ($mail->send()) {
-							echo "Congratulation, You are successfull registered in Fest20.0!";
+							echo "Congratulation, You are successfull registered in Purva20.0!";
+							header('Location: index.php');
 						} else {
 							echo "Mailer Error: " . $mail->ErrorInfo;
 						}
@@ -103,12 +104,12 @@
 							$row = mysqli_fetch_array($result);
 							$festId = $row['id'];
 							
-							$mail->setFrom('sat.test1000@gmail.com', 'FestName'); 
+							$mail->setFrom('sat.test1000@gmail.com', 'Purve20.0'); 
 							$mail->addAddress($email, $name); 
 							$mail->Subject = 'Successfull Registration'; 
-							$mail->Body = "Congratulation, {$name} \t\t\t\t\n You are successfully registered in Fest20.0 \n\t\t your ##FestName## Id is {$festId}  \n\t\t verify your email http://localhost/fest/email.php?en1={$en1}";
+							$mail->Body = "Congratulation, {$name} \t\t\t\t\n You are successfully registered in Purva20.0 \n\t\t your Purva20.0 Id is {$festId}  \n\t\t verify your email http://localhost/fest/email.php?en1={$en1}";
 							if ($mail->send()) {
-								echo "Congratulation, You are successfull registered in Fest20.0!";
+								echo "Congratulation, You are successfull registered in Purva20.0!";
 							} else {
 								echo "Mailer Error: " . $mail->ErrorInfo;
 							}

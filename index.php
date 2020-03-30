@@ -9,7 +9,7 @@
    <meta charset="utf-8">
 	<title>Purv</title>
 	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="author" content=""> 
 
    <!-- Mobile Specific Metas
    ================================================== -->
@@ -174,7 +174,7 @@
 
    <!-- About Section
    ================================================== -->
-   <section id="about">
+   <section id="about" style="padding-top:110px; padding-bottom: 110px;">
 
       <div class="row">
 
@@ -297,7 +297,7 @@
 				<h1><span>Events</span></h1>
 				<div class = "pos">
 					<div class="container">
-					  <div class="card"><a href = "techEvents.html">
+					  <div class="card"><a href = "techEvents.php">
 						<h3 class="title">Technical</h3>
 						<div class="bar">
 						  <div class="emptybar"></div>

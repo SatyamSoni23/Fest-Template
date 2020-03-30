@@ -1,6 +1,6 @@
 <?php
 	$email = filter_input(INPUT_POST, 'email');
-	$password = encryptIt(filter_input(INPUT_POST, 'password'));
+	$password = encryptIt(filter_input(INPUT_POST, 'pass'));
 	$login = filter_input(INPUT_POST, 'login');
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
 		$host = "localhost";
@@ -14,7 +14,7 @@
 		}	
 		else{
 			$table = "festDetail";
-			$sql1 = "SELECT * FROM `".$table."` WHERE email = '$email'";
+			$sql1 = "SELECT * FROM `".$table."` WHERE email = '$email' and password = '$password'";
 			$result = $conn->query($sql1);
 			if($result->num_rows > 0){
 				$row = mysqli_fetch_array($result);

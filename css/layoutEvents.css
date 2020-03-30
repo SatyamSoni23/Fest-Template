@@ -28,7 +28,7 @@ body { background: #0f0f0f; }
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
 
-header {
+#home {
    position: relative;
    height: 800px;
    min-height: 500px;
@@ -155,6 +155,7 @@ ul#nav li.current a { color: #F06000; }
   align-items: center;
   border-radius: 8px;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 /* This container is needed to position the front and back side */
@@ -231,6 +232,114 @@ ul#nav li.current a { color: #F06000; }
   align: center;
   margin-top: 10px;
 }
+
+
+/* ------------------------------------------------------------------ */
+/* h. Popup Form
+/* ------------------------------------------------------------------ */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #24323d;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  color: #fff;
+}
+modelHead {
+  font: 16px/18px 'opensans-bold', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;	
+}	
+
+.modal-body {padding: 2px 16px;}
+.wrap-input1{
+	margin: auto;
+	padding-top: 20px;
+	color: #330702;
+
+}	
+.input1{
+	line-height: 4px;
+	border-radius: 8px;
+}	
+.contHead{
+	display: inline;
+	color: #fefefe;
+	font: 20px/22px 'librebaskerville-italic', serif;
+	padding-top: 1em;
+	vertical-align: middle;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}	
+.input100{
+	border-radius: 8px;
+	padding-top: 100px; 
+}
+
+.input101{
+	border-radius: 8px;
+}	
+.subBtn{
+	border-radius: 8px;
+}	
+/* ------------------------------------------------------------------ */
+/* h. Horizontal Scrolling
+/* ------------------------------------------------------------------ */
+
+
 
 /* ------------------------------------------------------------------ */
 /* h. Horizontal Scrolling

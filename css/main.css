@@ -1,7 +1,7 @@
 
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
-
+wrap-login100
 @font-face {
   font-family: Poppins-Regular;
   src: url('../fonts/poppins/Poppins-Regular.ttf'); 
@@ -126,8 +126,6 @@ button:hover {
 iframe {
 	border: none !important;
 }
-
-
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
@@ -201,12 +199,15 @@ body {
 .login100-pic {
   width: 316px;
   opacity: 1.8;
-
 }
 
 .login100-pic img {
   max-width: 100%;
 }
+.login101-pic{
+	top: 0;
+	left: 0;
+}	
 /*------------------------------------------------------------------
 [  ]*/
 .login100-form {
