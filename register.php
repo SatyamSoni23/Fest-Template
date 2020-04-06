@@ -206,6 +206,38 @@
 	  opacity: 0;
 	  visibility: hidden;
 	}
+	@media only screen and (max-width: 480px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}	
+	}	
+	@media only screen and (max-width: 767px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}
+	}	
+	@media only screen and (max-width: 900px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}
+	}	
+	@media only screen and (max-width: 1024px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 47%;
+		}
+	}	
 	</style>
 	<script>
 	setTimeout(function() {
@@ -220,7 +252,7 @@
 			<div class="wrap-login100">
 				<div class="container-right">
 					<div class="login100-pic js-tilt" data-tilt>
-						<img src="images/img-01.png" alt="IMG">
+						<img src="images/purva.png" alt="IMG">
 					</div>
 				</div>
 				<form class="login100-form-register validate-form" method="post" action="register.php">

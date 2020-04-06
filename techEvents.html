@@ -93,6 +93,38 @@
 	  opacity: 0;
 	  visibility: hidden;
 	}
+	@media only screen and (max-width: 480px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}	
+	}	
+	@media only screen and (max-width: 767px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}
+	}	
+	@media only screen and (max-width: 900px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}
+	}	
+	@media only screen and (max-width: 1024px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 47%;
+		}
+	}	
 	</style>
 	<script>
 	setTimeout(function() {
@@ -111,12 +143,12 @@
 	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
          <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="index.php#home">Home</a></li>
-            <li><a class="smoothscroll" href="index.php#about">About</a></li>
-	        <li><a class="smoothscroll" href="index.php#theme">Theme</a></li>
-			<li><a class="smoothscroll" href="index.php#stats">Stats</a></li>
-            <li><a class="smoothscroll" href="index.php#events">Events</a></li>
-            <li><a class="smoothscroll" href="index.php#contact">Contact</a></li>
+            <li class="current"><a class="smoothscroll" href="index.php">Home</a></li>
+            <li><a href="index.php#about">About</a></li>
+	        <li><a href="index.php#theme">Theme</a></li>
+			<li><a href="index.php#stats">Stats</a></li>
+            <li><a href="index.php#events">Events</a></li>
+            <li><a href="index.php#contact">Contact</a></li>
 			<li><a href="register.php">Register</a></li>
          </ul> <!-- end #nav -->
 
@@ -136,8 +168,8 @@
 					<div class="flip-card-back">
 					  <h1>Robowar</h1>
 					  <p style = "text-align: center;">Various robots will fight with each other. Predefined track will be given to the participants.</p>
-					  <p>Rules and Regulations:</p>
-					  <ul>
+					  <p class = "rule">Rules and Regulations:</p>
+					  <ul class = "rule1">
 						  <li class="cardLi" type="circle"><span>>  Dimension of robots should be maximum of 30X30 inches</span></li>
 						  <li class="cardLi" type="circle"><span>>  Weight of robot should not be more than 2 kgs</span></li>
 						  <li class="cardLi" type="circle"><span>>  Power supply limits to 12 volts.</span></li>
@@ -159,14 +191,14 @@
 					<h1>Robosoccer</h1>
 					  <p style = "text-align: center;">Are you a lover of both football and bots? Then this is the right place for you to combine these two and showcase your talent. *Robo Soccer* is a game of soccer played by bots between two teams, where you can score a goal like Ronaldo or Messi, or defend like Ramos or Cellini. Step into the arena and show us what you got.
 					  </p>
-					  <p>Rules and Regulations:</p>
-					  <ul>
+					  <p class = "rule">Rules and Regulations:</p>
+					  <ul class = "rule1">
 						  <li class="cardLi" type="circle"><span>>  Dimension of robots should be maximum of 15X15 inches</span></li>
 						  <li class="cardLi" type="circle"><span>>  Weight of robot should not be more than 2 kgs</span></li>
 						  <li class="cardLi" type="circle"><span>>  Power supply limits to 12 volts.</span></li>
 						  <li class="cardLi" type="circle"><span>>  Participants need to carry their identity card.</span></li>
 					  </ul>
-					  <Button class = "eventReg" id="myBtn1" name = "robosoccer">Register</Button>
+					  <a href = "EventReg/robosoccer.php"><Button class = "eventReg" id="myBtn1" name = "robosoccer">Register</Button></a>
 					  
 					</div>	
 				</div>
@@ -181,15 +213,15 @@
 					<div class="flip-card-back">
 					<h1>Roborace</h1>
 					  <p style = "text-align: center;">Robots will race with each other crossing many hurdles.</p>
-					  <p>Rules and Regulations:</p>
-					  <ul>
+					  <p class = "rule">Rules and Regulations:</p>
+					  <ul class = "rule1">
 					  	   <li class="cardLi" type="circle"><span>>  Dimension of robots should be maximum of 15X15 inches</span></li>
 						  <li class="cardLi" type="circle"><span>>  Speed as well as troubles in the track should be considered by any team
 																	participating. </span></li>
 						  <li class="cardLi" type="circle"><span>>  The team scoring maximum points will be the winner</span></li>
 						  <li class="cardLi" type="circle"><span>>  Participants need to carry their identity card.</span></li>
 					  </ul>
-					  <Button class = "eventReg" id="myBtn2" name = "roborace">Register</Button>
+					  <a href = "EventReg/roborace.php"><Button class = "eventReg" id="myBtn2" name = "roborace">Register</Button></a>
 					</div>	
 				</div>
 			 </div>
@@ -206,15 +238,15 @@
 														turnings. Participants need to make a robot which should follow a particular light which
 														would be laid on the floor
 					  </p>
-					  <p>Rules and Regulations:</p>
-					  <ul>
+					  <p class = "rule">Rules and Regulations:</p>
+					  <ul class = "rule1">
 						  <li class="cardLi" type="circle"><span>>  Dimension of robots should be maximum of 30X30 inches</span></li>
 						  <li class="cardLi" type="circle"><span>>  Weight of robot should not be more than 2 kgs</span></li>
 						  <li class="cardLi" type="circle"><span>>  Power supply limits to 12 volts.</span></li>
 						  <li class="cardLi" type="circle"><span>>  Participants need to carry their identity card.</span></li>
 						  <li class="cardLi" type="circle"><span>>  No toy car is allowed.</span></li>
 					  </ul>
-					  <Button class = "eventReg" id="myBtn3" name = "lightfollower">Register</Button>
+					  <a href = "EventReg/lightfollower.php"><Button class = "eventReg" id="myBtn3" name = "lightfollower">Register</Button></a>
 					</div>	
 				</div>
 			 </div>
@@ -231,15 +263,15 @@
 														turnings. Participants need to make a robot which should follow a particular line which
 														would be laid on the floor
 					  </p>
-					  <p>Rules and Regulations:</p>
-					  <ul>
+					  <p class = "rule">Rules and Regulations:</p>
+					  <ul class = "rule1">
 						  <li class="cardLi" type="circle"><span>>  Dimension of robots should be maximum of 30X30 inches</span></li>
 						  <li class="cardLi" type="circle"><span>>  Weight of robot should not be more than 2 kgs</span></li>
 						  <li class="cardLi" type="circle"><span>>  Power supply limits to 12 volts.</span></li>
 						  <li class="cardLi" type="circle"><span>>  Participants need to carry their identity card.</span></li>
 						  <li class="cardLi" type="circle"><span>>  No toy car is allowed.</span></li>
 					  </ul>
-					  <Button class = "eventReg" id="myBtn4" name = "linefollower">Register</Button>
+					  <a href = "EventReg/linefollower.php"><Button class = "eventReg" id="myBtn4" name = "linefollower">Register</Button></a>
 					</div>	
 				</div>
 			 </div>
@@ -256,14 +288,14 @@
 														 attaching one to the other. The winning robot, the one
 														with the best adjustments, pulls the other across the line
 					</p>
-					  <p>Rules and Regulations:</p>
-					  <ul>
+					  <p class = "rule">Rules and Regulations:</p>
+					  <ul class = "rule1">
 						  <li class="cardLi" type="circle"><span>>  Dimension of robots should be maximum of 30X30 inches</span></li>
 						  <li class="cardLi" type="circle"><span>>  Weight of robot should not be more than 2 kgs</span></li>
 						  <li class="cardLi" type="circle"><span>>  Power supply limits to 12 volts.</span></li>
 						  <li class="cardLi" type="circle"><span>>  Participants need to carry their identity card.</span></li>
 					  </ul>
-					  <Button class = "eventReg" id="myBtn5" name = "tugofwar">Register</Button>
+					  <a href = "EventReg/tugofwar.php"><Button class = "eventReg" id="myBtn5" name = "tugofwar">Register</Button></a>
 					</div>	
 				</div>
 			 </div>
@@ -400,6 +432,7 @@
          </div>
 
          <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+		<p class = "copyright" style = "color: #bfb8b8;"><strong>&copy; Copyright 2020 Satyam Soni</strong></p>
 
       </div>
 

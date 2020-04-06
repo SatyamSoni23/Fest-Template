@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Purv</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+   <link rel="stylesheet" href="css/layoutEvents.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+    <!-- Script
+    ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="p.png" >
+	
+	<style>
+	/* width */
+	::-webkit-scrollbar {
+	  width: 10px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+	  box-shadow: inset 0 0 5px grey; 
+	  border-radius: 10px;
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #790D00; 
+	  border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+	  background: #b30000; 
+	}
+
+</style>
+
+</head>
+
+<body>
+   <!-- Preloader
+   ================================================== -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<div id="loading"><img src = "images/preloader1.gif"></div>
+	<style>
+	#loading{
+	  position: fixed;
+	  height: 100%;
+	  top:0;
+	  left:0;
+	  right:0;
+	  bottom:0;
+	  background-color: #000;
+	  color: white;
+	  
+	  transition: 0.5s;
+	  z-index: 999999;
+	}
+	#loading img{
+	  height: 350px;
+	  width: 350px;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  top: 35%;
+	  left: 45%;
+	  position: absolute;
+      margin: -100px 0 0 -100px;
+	}
+	#loading.hidden{
+	  opacity: 0;
+	  visibility: hidden;
+	}
+	@media only screen and (max-width: 480px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}	
+	}	
+	@media only screen and (max-width: 767px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}
+	}	
+	@media only screen and (max-width: 900px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}
+	}	
+	@media only screen and (max-width: 1024px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 47%;
+		}
+	}	
+	</style>
+	<script>
+	setTimeout(function() {
+	  $('#loading').addClass('hidden');
+	}, 2000);
+
+	</script>
+	
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="index.php">Home</a></li>
+            <li><a href="index.php#about">About</a></li>
+	        <li><a href="index.php#theme">Theme</a></li>
+			<li><a href="index.php#stats">Stats</a></li>
+            <li><a href="index.php#events">Events</a></li>
+            <li><a href="index.php#contact">Contact</a></li>
+			<li><a href="register.php">Register</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+	
+<div class="row banner">
+
+ <div class="app" >
+  <h1><span>Informals & Workshops</span></h1>
+      <div class = "hs">
+	    <div class = "itemsEvents">
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+					  <img src="images/sparkquest.jpg" alt="Avatar" style="width:100%;height:100%; border-radius: 8px;;">
+					</div>
+					<div class="flip-card-back">
+					  <h1>Spark Quest 2.0</h1>
+					  <p style = "text-align: center;">"Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it."<br>Hunt the code is an offline programming event. which tests your logical, mathematical and basic programming skills. Given the input and output of a program, you have to figure out what the program does.</p>
+					  <a href = "EventInfo/sparkquest.php"><Button class = "eventReg" id="myBtn" name = "robowar">Register</Button></a>
+					  
+					</div>
+				</div>
+			 </div>
+		</div>
+		<div class = "itemsEvents">
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+					  <img src="images/maskmuse.png" alt="Avatar" style="width:100%;height:100%; border-radius: 8px;;">
+					</div>
+					<div class="flip-card-back">
+					<h1>Mask Muse</h1>
+					  <p style = "text-align: center;">Both face and body painting have existed around the world. Unlike tattoos which are permanent, face painting is a temporary work that lasts several hours or even days as with the case of henna painted decoration. Today, artists and face painting artisans use cosmetic-like paints to decorate faces.
+					  </p>
+					  <a href = "EventInfo/maskmuse.php"><Button class = "eventReg" id="myBtn1" name = "robosoccer">Register</Button></a>
+					  
+					</div>	
+				</div>
+			 </div>
+		</div>	 
+		<div class = "itemsEvents">
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+					  <img src="images/quizicalsuspect.jpg" alt="Avatar" style="width:100%;height:100%; border-radius: 8px;;">
+					</div>
+					<div class="flip-card-back">
+					<h1>Quizical Suspects.</h1>
+					  <p style = "text-align: center;">Everyone loves a quiz! Whether it’s a Monday night pub quiz or a sizeable quiz to round up the year, we enjoy getting a chance to flex our general (and sometimes completely useless!) knowledge skills, especially when the chance to boast about being part of the winning team is on offer. If you’re considering putting together a quiz or want some inspiration for fun quiz round ideas, we’ve put together a fantastic collection of some of the best quiz rounds we’ve come across to help you get started.</p>
+					  <a href = "EventInfo/quizicalsuspects.php"><Button class = "eventReg" id="myBtn2" name = "roborace">Register</Button></a>
+					</div>	
+				</div>
+			 </div>
+		</div>	 
+		<div class = "itemsEvents">
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+					  <img src="images/rubix.jpg" alt="Avatar" style="width:100%;height:100%; border-radius: 8px;;">
+					</div>
+					<div class="flip-card-back">
+					<h1>Rubix</h1>
+					  <p style = "text-align: center;">Rubik's Cube, each of the six faces was covered by nine stickers, each of one of six solid colours: white, red, blue, orange, green, and yellow. Some current versions of the cube have been updated to use coloured plastic panels instead, which prevents peeling and fading. An internal pivot mechanism enables each face to turn independently, thus mixing up the colours. For the puzzle to be solved, each face must be returned to have only one colour. Similar puzzles have now been produced with various numbers of sides, dimensions, and stickers, not all of them by Rubik.
+					  </p>
+					  <a href = "EventInfo/rubix.php"><Button class = "eventReg" id="myBtn3" name = "lightfollower">Register</Button></a>
+					</div>	
+				</div>
+			 </div>
+		</div>	 
+		<div class = "itemsEvents">
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+					  <img src="images/root9d.jpg" alt="Avatar" style="width:100%;height:100%; border-radius: 8px;;">
+					</div>
+					<div class="flip-card-back">
+					<h1>root9B</h1>
+					  <p style = "text-align: center;"> A conference and exhibition aimed at enterprise senior decision-makers.
+In just one day, the event will provide essential intelligence that enables senior directors and managers to drive their cyber security strategy forward. The conference covers today's cyber security trends and threats as well as those of the future, equipping delegates with the tools needed to cope in an increasingly complex landscape.
+					  </p>
+					  <a href = "EventInfo/root9b.php"><Button class = "eventReg" id="myBtn4" name = "linefollower">Register</Button></a>
+					</div>	
+				</div>
+			 </div>
+		</div>	 
+		<div class = "itemsEvents">
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+					  <img src="images/devlogics.jpg" alt="Avatar" style="width:100%;height:100%; border-radius: 8px;;">
+					</div>
+					<div class="flip-card-back">
+					<h1>Devlogics</h1>
+					  <p style = "text-align: center;">Introduces students to events, one of the main concepts used across coding languages. Students learn that events are actions that users do which cause programs to respond in certain ways. Students learn the concept of event handlers, the pieces of code that dictate what happens when a certain event occurs, and demonstrates how events and event handlers allow programs to be interactive.
+					</p>
+					  <a href = "EventInfo/devlogics.php"><Button class = "eventReg" id="myBtn5" name = "tugofwar">Register</Button></a>
+					</div>	
+				</div>
+			 </div>
+		</div>	 
+	  </div> 
+	</div>
+</div>
+ 
+ 
+<!----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+
+	</div>
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+   </header> <!-- Header End -->
+
+   
+   <!-- Contact Section
+   ================================================== -->
+   <section id="contact">
+
+         <div class="row section-head">
+
+            <div class="two columns header-col">
+
+               <h1><span>Get In Touch.</span></h1>
+
+            </div>
+
+            <div class="ten columns">
+
+                  <p class="lead">Please feel free to leave a message at the given contact details. We'd love to hear it from you!
+                  </p>
+
+            </div>
+
+         </div>
+
+        <div class="row">
+
+            <div class="two columns">
+
+                  <div>
+                      <h4>Contact Us</h4>
+                      <p class="address">
+						  IIITK<br>
+                          IIITK Campus<br>Jhalana gram,
+                          Jaipur, India <br><br>
+                          <span>000-0054241</span><br>
+                          <span>iiit@iiitk.ac.in</span>
+                      </p>
+                  </div>
+			</div>
+			<div class="two columns">
+
+                  <div>
+                      <h4>Marketing</h4>
+                      <p class="address">
+                          Abc Soni<br>
+                          IIITK Campus<br>Jhalana gram,
+                          Jaipur, India <br><br>
+                          <span>+91-6387363138</span><br>
+                          <span>abc2305@gmail.com</span>
+                      </p>
+                  </div>
+			</div>
+			<div class="two columns">
+
+                  <div>
+                      <h4>Publicity</h4>
+                      <p class="address">
+                          Def Soni<br>
+                          IIITK Campus<br>Jhalana gram,
+                          Jaipur, India <br><br>
+                          <span>+91-6387363138</span><br>
+                          <span>def2305@gmail.com</span>
+                      </p>
+                  </div>
+			</div>
+			<div class="one columns">
+
+                  <div>
+					  <h3><a href = "register.php">Register</a></h3>
+                      <h3><a href = "#home">Home</a></h3>
+                      <h3><a href = "#about">About</a></h3>
+					  <h3><a href = "#theme">Theme</a></h3>
+					  <h3><a href = "#">Team</a></h3>
+                  </div>
+			</div>
+			<div class="one columns">
+
+                  <div>
+				      <h3><a href = "login.php">Login</a></h3>
+                      <h3><a href = "#events">Events</a></h3>
+                      <h3><a href = "#contact">Contact</a></h3>
+					  <h3><a href = "#">Sponsors</a></h3>
+					  <h3><a href = "#">FAQ</a></h3>
+                  </div>
+			</div>
+			<div class="four columns">
+				<div class = "contMed">
+					<video controls>
+					  <source src="images/teaser.mp4" type="video/mp4">
+					  <source src="images/teaser.ogg" type="video/ogg">
+					Your browser does not support the video tag.
+					</video>
+                </div> 
+			</div>
+		</div>
+
+   </section> <!-- Contact Section End-->
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="social-links">
+			    <li><a href="https://www.facebook.com/profile.php?id=100029288597566" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/satyam-soni-332522172/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+			    <li><a href="https://www.youtube.com/channel/UC7bYDBd9XNo9MNQPC25pwMg?view_as=subscribe" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                <li><a href="https://twitter.com/SatyamS10969618" target="_blank"><i class="fa fa-twitter"></i></a></li>		   
+            <ul>
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+		<p class = "copyright" style = "color: #bfb8b8;"><strong>&copy; Copyright 2020 Satyam Soni</strong></p>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
+   <script src="js/eventsModel.js"></script>
+   
+</body>
+
+</html>

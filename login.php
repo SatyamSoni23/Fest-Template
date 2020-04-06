@@ -123,6 +123,38 @@
 	  opacity: 0;
 	  visibility: hidden;
 	}
+	@media only screen and (max-width: 480px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}	
+	}	
+	@media only screen and (max-width: 767px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}
+	}	
+	@media only screen and (max-width: 900px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}
+	}	
+	@media only screen and (max-width: 1024px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 47%;
+		}
+	}	
 	</style>
 	<script>
 	setTimeout(function() {
@@ -135,13 +167,13 @@
 			<div class="wrap-login100">
 				<div class="container-right">
 					<div class="login100-pic js-tilt" data-tilt>
-						<img src="images/img-01.png" alt="IMG">
+						<img src="images/purva.png" alt="IMG">
 					</div>
 				</div>
 
 				<form class="login100-form validate-form" method = "post" action = "login.php">
 					<span class="login100-form-title">
-						Blitz Login
+						Purva Login
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
@@ -170,13 +202,13 @@
 						<span class="txt1">
 							Forgot
 						</span>
-						<a class="txt2" href="#">
+						<a class="txt2" href="forgotPassword.php">
 							Username / Password?
 						</a>
 					</div>
 
 					<div class="text-center p-t-50 p-b-10">
-						<a class="txt2" href="#">
+						<a class="txt2" href="register.php">
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>

@@ -12,9 +12,34 @@
       letter-spacing: -1px;
       margin: 0 auto 12px auto;
    }
+   .hs {
+
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: repeat(6, calc(40% - var(--gutter) * 2));
+  grid-template-rows: minmax(400px, 1fr);
+  
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
 
 }
-
+.hs h1{
+	font-size: 18px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}	
+.hs p{
+	margin: 0;
+	padding-top: 5px;
+	font-size: 12px;
+	padding-bottom: 0px;
+	line-height: 16px;
+}
+.hs Button{
+	margin-top: 0;
+}
 /* screenwidth less than 900px
 --------------------------------------------------------------------- */
 @media only screen and (max-width: 900px) {
@@ -39,8 +64,34 @@
       font: 11px 'opensans-bold', sans-serif;
       letter-spacing: 1.5px;
    }
+	.hs {
 
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: repeat(6, calc(40% - var(--gutter) * 2));
+  grid-template-rows: minmax(400px, 1fr);
+  
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
 
+}
+.hs h1{
+	font-size: 18px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}	
+.hs p{
+	margin: 0;
+	padding-top: 5px;
+	font-size: 12px;
+	padding-bottom: 0px;
+	line-height: 16px;
+}
+.hs Button{
+	margin-top: 0;
+}	
    /* About Section
    ------------------------------------------------------------------- */
    #about .profile-pic {
@@ -129,7 +180,16 @@
       top: 0px;
       right: 30px;
    }
-
+.profile-pic{
+	display: none;
+}	
+.rightButton{
+   position: absolute;
+   top: 0;
+   left: 0;
+   margin-top: 5px; 
+   margin-left: 5px;
+} 
 	#nav-wrap > a:before,
    #nav-wrap > a:after {
 	   position: absolute;
@@ -215,8 +275,35 @@
 
     /* scrolldown link */
    header .scrolldown { display: none; }
+	.hs {
 
+	  display: grid;
+	  grid-gap: calc(var(--gutter) / 3);
+	  grid-template-columns: repeat(6, calc(50% - var(--gutter) * 2));
+	  grid-template-rows: minmax(400px, 1fr);
+	  
+	  overflow-x: scroll;
+	  scroll-snap-type: x proximity;
+	  padding-bottom: calc(.75 * var(--gutter));
+	  margin-bottom: calc(-.25 * var(--gutter));
 
+	}
+.hs h1{
+	font-size: 18px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}	
+.hs p{
+	margin: 0;
+	padding-top: 5px;
+	font-size: 12px;
+	padding-bottom: 0px;
+	line-height: 16px;
+}
+.hs Button{
+	margin-top: 0;
+
+}	
    /* About Section
    -------------------------------------------------------------------- */
    #about .profile-pic { display: none; }
@@ -374,8 +461,8 @@
 @media only screen and (max-width: 480px) {
 
    /* mobile navigation
-   -------------------------------------------------------------------- */
-   #nav-wrap ul#nav { width: auto; float: none; }
+   -------------------------------------------------------------------- */  
+   #nav-wrap ul#nav { width: auto; float: none;  }
 
    /* header styles
    -------------------------------------------------------------------- */
@@ -391,9 +478,21 @@
    }
   
    /* header social links */
-   header .social { font-size: 20px;}
+   header .social { font-size: 30px;}
    header .social li { margin: 0 6px; }
-	
+   
+
+.profile-pic{
+	display: none;
+}	
+.rightButton{
+   position: absolute;
+   top: 0;
+   left: 0;
+   margin-top: 5px; 
+   margin-left: 5px;
+}   
+
 	/* theme Section
    --------------------------------------------------------------------- */
    #theme {
@@ -409,7 +508,40 @@
    overflow: hidden;
    
 	}
-	
+.hs{
+  display: grid;
+  grid-gap: calc(var(--gutter) / 6);
+  grid-template-columns: repeat(6, calc(100% - var(--gutter) * 2));
+  grid-template-rows: minmax(400px, 1fr);
+  
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+}
+.hs h1{
+	font-size: 18px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}	
+.hs p{
+	margin: 0;
+	padding-top: 5px;
+	font-size: 12px;
+	padding-bottom: 0px;
+	line-height: 16px;
+}
+.hs Button{
+	margin-top: 0;
+
+}	
+.rule{
+	display: none;
+}
+.rule1{
+	display: none;
+}	
+
 	#events .header-col { padding-top: 9px; }
 
 

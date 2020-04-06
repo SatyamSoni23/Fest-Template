@@ -298,7 +298,7 @@ ul#nav li.current a { color: #F06000; }
   padding: 2px 16px;
   color: #fff;
 }
-modelHead {
+.modelHead {
   font: 16px/18px 'opensans-bold', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -382,8 +382,8 @@ modelHead {
 
   display: grid;
   grid-gap: calc(var(--gutter) / 2);
-  grid-template-columns: repeat(6, calc(45% - var(--gutter) * 2));
-  grid-template-rows: minmax(500px, 1fr);
+  grid-template-columns: repeat(6, calc(40% - var(--gutter) * 2));
+  grid-template-rows: minmax(550px, 1fr);
   
   overflow-x: scroll;
   scroll-snap-type: x proximity;

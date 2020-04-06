@@ -252,7 +252,13 @@ body {
   margin-bottom: 10px;
   
 }
-
+.wrap-input100 li {
+	font-size: 18/16px;
+	line-height: 20px;
+	font-family: 'librebaskerville-italic', serif;
+    margin-left: 10px;
+    list-style-type: circle;
+}	
 .input100 {
   font-family: Poppins-Medium;
   font-size: 15px;
@@ -374,7 +380,11 @@ body {
   color: #020e1a;
   padding-left: 28px;
 }
-
+label {
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+}
 /*------------------------------------------------------------------
 [ Button ]*/
 .container-login100-form-btn {
@@ -429,36 +439,89 @@ body {
 
 @media (max-width: 992px) {
   .wrap-login100 {
-    padding: 177px 90px 33px 85px;
+    /*padding: 177px 90px 33px 85px;*/
+	padding-top: 135px;
+	padding-left: 220px;
   }
-
-  .login100-pic {
-    width: 35%;
+  .login100-pic{
+	 display: none;
+  }  
+  #form1cont{
+    padding-top:0px;  
+  }	  
+  .container-right{
+  width: 480px;
+  padding: 50px 50px 10px 80px;
+  background: #08062c;
+  background-color: #020e1a;
+  background-image: linear-gradient(326deg, #08062c 0%, #020e1a 74%);
   }
-
   .login100-form {
-    width: 50%;
-  }
+  width: 480px;
+  padding: 50px 60px 0px 60px;
+  background: #1e3c72;
+  background-color: #2a5298;
+  background-image: linear-gradient(326deg, #1e3c72 0%, #2a5298 74%);   
+  }  
 }
 
 @media (max-width: 768px) {
   .wrap-login100 {
     padding: 100px 80px 33px 80px;
+  }	  
+  .login100-pic{
+	 display: none;
+  } 
+  .wrap-login100{
+	padding-top: 125px;
+  }  
+  #form1cont{
+    padding-top:0px;  
+  }	  
+  .container-right{
+  width: 480px;
+  padding: 50px 50px 10px 80px;
+  background: #08062c;
+  background-color: #020e1a;
+  background-image: linear-gradient(326deg, #08062c 0%, #020e1a 74%);
   }
-
-  .login100-pic {
-    display: none;
-  }
-
   .login100-form {
-    width: 100%;
-  }
+  width: 480px;
+  padding: 50px 60px 0px 60px;
+  background: #1e3c72;
+  background-color: #2a5298;
+  background-image: linear-gradient(326deg, #1e3c72 0%, #2a5298 74%);   
+  }  
 }
 
 @media (max-width: 576px) {
   .wrap-login100 {
     padding: 100px 15px 33px 15px;
   }
+  .login100-pic{
+	 display: none;
+  } 
+  .wrap-login100{
+	padding-top: 125px;
+  }  
+  #form1cont{
+    padding-top:0px;  
+  }	  
+  .container-right{
+  width: 480px;
+  padding: 50px 50px 10px 80px;
+  background: #08062c;
+  background-color: #020e1a;
+  background-image: linear-gradient(326deg, #08062c 0%, #020e1a 74%);
+  }
+  .login100-form {
+  width: 480px;
+  padding: 50px 60px 0px 60px;
+  background: #1e3c72;
+  background-color: #2a5298;
+  background-image: linear-gradient(326deg, #1e3c72 0%, #2a5298 74%);   
+  }  
+  
 }
 
 

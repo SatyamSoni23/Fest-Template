@@ -15,7 +15,7 @@
 	session_start();
 	$id = $_SESSION['id'];
 	if(!$id){
-		header('Location: ../index.php');
+		header('Location: ../login.php');
 	}	
 	$email = $_SESSION['email'];
 	$name = $_SESSION['name'];
@@ -243,6 +243,38 @@
 	  opacity: 0;
 	  visibility: hidden;
 	}
+	@media only screen and (max-width: 480px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}	
+	}	
+	@media only screen and (max-width: 767px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}
+	}	
+	@media only screen and (max-width: 900px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}
+	}	
+	@media only screen and (max-width: 1024px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 47%;
+		}
+	}	
 	</style>
 	<script>
 	setTimeout(function() {
@@ -271,7 +303,7 @@
 								</span>
 							</div>
 							<div class="wrap-input100 validate-input">
-								<select class="input100 round" id="teamsize" name="teamsize" placeholder="team Size" required="true">
+								<select class="input100 round" id="teamsize" name="teamsize" placeholder="Team Size" required="true">
 										<option selected="" disabled="">Select Team Size</option>
 										<option value="one" class="input100">1</option>
 										<option value="two" class="input100">2</option>

@@ -52,7 +52,7 @@ header .banner {
    vertical-align: middle;
    margin: 0 auto;
    width: 85%;
-   padding-bottom: 30px;s
+   padding-bottom: 30px;
    text-align: center;
 }
 
@@ -84,6 +84,7 @@ header .banner-text hr {
 
 /* header social links */
 header .social {
+   margin-top: 50px;
    margin: 24px 0;
    padding: 0;
    font-size: 30px;
@@ -233,8 +234,8 @@ ul#nav li.current a { color: #F06000; }
 }
 #about .profile-pic {
    position: relative;
-   width: 700px;
-   height: 500px;
+   width: 300px;
+   height: 300px;
    border-radius: 0%;
 }
 #about .contact-details { width: 41.66667%; }
@@ -1159,8 +1160,8 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 footer {
-   padding-top: 48px;
-   margin-bottom: 48px;
+   padding-top: 28px;
+   margin-bottom: 28px;
    color: #303030;
    font-size: 14px;
    text-align: center;
@@ -1171,26 +1172,26 @@ footer a, footer a:visited { color: #525252; }
 footer a:hover, footer a:focus { color: #fff; }
 
 /* copyright */
-footer .copyright {
+.copyright {
     margin: 0;
     padding: 0;
  }
-footer .copyright li {
+.copyright li {
     display: inline-block;
     margin: 0;
     padding: 0;
-    line-height: 24px;
+    line-height: 14px;
 }
 .ie footer .copyright li {
    display: inline;
 }
-footer .copyright li:before {
+.copyright li:before {
     content: "\2022";
     padding-left: 10px;
     padding-right: 10px;
     color: #095153;
 }
-footer .copyright  li:first-child:before {
+.copyright  li:first-child:before {
     display: none;
 }
 

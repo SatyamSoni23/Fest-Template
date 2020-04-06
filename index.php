@@ -91,6 +91,38 @@
 	  opacity: 0;
 	  visibility: hidden;
 	}
+	@media only screen and (max-width: 480px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}	
+	}	
+	@media only screen and (max-width: 767px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}
+	}	
+	@media only screen and (max-width: 900px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 45%;
+		}
+	}	
+	@media only screen and (max-width: 1024px){
+		#loading img{
+			height: 250px;
+			width: 250px;
+			top: 45%;
+			left: 47%;
+		}
+	}	
 	</style>
 	<script>
 	setTimeout(function() {
@@ -107,7 +139,6 @@
 
          <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
 	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-
          <ul id="nav" class="nav">
             <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
             <li><a class="smoothscroll" href="#about">About</a></li>
@@ -119,7 +150,19 @@
          </ul> <!-- end #nav -->
 
       </nav> <!-- end #nav-wrap -->
+	  <div class="row banner">
+         <div class="banner-text">
+            <ul class="social"><br><br><br><br><br>
+               <li><a href="https://www.facebook.com/profile.php?id=100029288597566" target="_blank"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="https://www.linkedin.com/in/satyam-soni-332522172/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+			   <li><a href="https://www.youtube.com/channel/UC7bYDBd9XNo9MNQPC25pwMg?view_as=subscribe" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+               <li><a href="https://twitter.com/SatyamS10969618" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+         </div>
+      </div>
+
 	<?php
+		ob_start();
 		$login = filter_input(INPUT_POST, 'login');
 		session_start();
 		$username = $_SESSION['name'];
@@ -130,7 +173,7 @@
 			if(array_key_exists('logout', $_POST)) { 
 				session_destroy();
 				$_SESSION = array();
-				header('Location: index.php'); 
+				echo "<script>window.location.href='index.php';</script>";
 			}
 			/*$logout = filter_input(INPUT_POST, 'logout');
 			if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -141,30 +184,13 @@
 			}*/
 		}
 		else{
-			echo '<form method = "post"><input type="submit" name="login" class="rightButton" value="Login" style = "background-color: #330702; font-family: serif;"/></form>';
-			$login = filter_input(INPUT_POST, 'login');
+			echo '<form method = "post" action=""><input type="submit" name="login" class="rightButton" value="login" style = "background-color: #330702; font-family: serif;"/></form>';
+			//$login = filter_input(INPUT_POST, 'login');
 			if(array_key_exists('login', $_POST)) { 
-				header('Location: login.php'); 
+				echo "<script>window.location.href='login.php';</script>";
 			} 
 		}
 	?>
-      <div class="row banner">
-         <div class="banner-text">
-            <!--<h1 class="responsive-headline" style = "font-family: Agency fb;">Algotune</h1>
-            <h3>The Annual Cultural Fest of Indian Institute of Information Technology<br><a class="smoothscroll" href="#about">start scrolling</a>
-            and learn more <a class="smoothscroll" href="#about">about</a>.</h3>
-            <hr />
-			-->
-			<br><br><br><br><br><br>
-            <ul class="social">
-               <li><a href="https://www.facebook.com/profile.php?id=100029288597566" target="_blank"><i class="fa fa-facebook"></i></a></li>
-               <li><a href="https://www.linkedin.com/in/satyam-soni-332522172/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-			   <li><a href="https://www.youtube.com/channel/UC7bYDBd9XNo9MNQPC25pwMg?view_as=subscribe" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
-               <li><a href="https://twitter.com/SatyamS10969618" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            </ul>
-         </div>
-      </div>
-
       <p class="scrolldown">
          <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
       </p>
@@ -174,13 +200,13 @@
 
    <!-- About Section
    ================================================== -->
-   <section id="about" style="padding-top:110px; padding-bottom: 110px;">
+   <section id="about" style="padding-top:160px; padding-bottom: 180px; background-image: url('images/facepainting.gif') ">
 
       <div class="row">
 
          <div class="three columns">
 
-            <img class="profile-pic"  src="images/cinderella.gif" alt="" />
+            <img class="profile-pic"  src="images/cracker.gif" alt="" />
 
          </div>
 
@@ -195,7 +221,6 @@
          </div> <!-- end .main-col -->
 		  <div class="three columns">
 
-            <img class="profile-pic"  src="images/party.gif" alt="" />
 
          </div>
 		 
@@ -297,7 +322,7 @@
 				<h1><span>Events</span></h1>
 				<div class = "pos">
 					<div class="container">
-					  <div class="card"><a href = "techEvents.php">
+					  <div class="card"><a href = "techEvents.html">
 						<h3 class="title">Technical</h3>
 						<div class="bar">
 						  <div class="emptybar"></div>
@@ -312,7 +337,7 @@
 							</div>
 						</div></a>
 					  </div>
-					  <div class="card"><a href = "#">
+					  <div class="card"><a href = "cultEvents.html">
 						<h3 class="title">Cultural</h3>
 						<div class="bar">
 						  <div class="emptybar"></div>
@@ -328,7 +353,7 @@
 							</div>
 						</div></a>
 					  </div>
-					  <div class="card"><a href = "#">
+					  <div class="card"><a href = "proniEvents.html">
 						<h3 class="title">Proshows</h3>
 						<div class="bar">
 						  <div class="emptybar"></div>
@@ -343,7 +368,7 @@
 							</div>
 						</div></a>	
 					  </div>
-					  <div class="card"><a href = "#">
+					  <div class="card"><a href = "InfoEvents.html">
 						<h3 class="title">Informals & workshops</h3>
 						<div class="bar">
 						  <div class="emptybar"></div>
@@ -484,9 +509,8 @@
             <ul>
 
          </div>
-
          <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
-
+		<p class = "copyright" style = "color: #bfb8b8;"><strong>&copy; Copyright 2020 Satyam Soni</strong></p>
       </div>
 
    </footer> <!-- Footer End-->
