@@ -8,8 +8,8 @@
     $mail->Port = 587;
     $mail->SMTPSecure = 'tls';
     $mail->SMTPAuth = true; 
-    $mail->Username = "sat.test1000@gmail.com"; 
-    $mail->Password = "33404328"; 
+    $mail->Username = "Your Email Id"; 
+    $mail->Password = "Password"; 
 	$name = filter_input(INPUT_POST, 'name');
 	$email = filter_input(INPUT_POST, 'email');
 	$gender = filter_input(INPUT_POST, 'gender');
