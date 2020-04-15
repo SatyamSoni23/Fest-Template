@@ -8,13 +8,13 @@
     $mail->Port = 587;
     $mail->SMTPSecure = 'tls';
     $mail->SMTPAuth = true; 
-    $mail->Username = "sat.test1000@gmail.com"; 
-    $mail->Password = "33404328"; 
+    $mail->Username = "your email"; 
+    $mail->Password = "email password"; 
 	$register = filter_input(INPUT_POST, 'register');
 	
 	session_start();
 	$id = $_SESSION['id'];
-	if(!$id){
+	if(empty($id)){
 		header('Location: ../login.php');
 	}	
 	$email = $_SESSION['email'];
@@ -40,10 +40,12 @@
 	$email4 = filter_input(INPUT_POST, 'email4');
 	$pass4 = encryptIt(filter_input(INPUT_POST, 'pass4'));
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
-		$host = "localhost";
-		$dbusername = "root";
-		$dbpassword = "";
-		$dbname = "fest_registration";
+		//---------------------------------------------------------------------//
+		$host = "hostname";
+		$dbusername = "database username";
+		$dbpassword = "database password";
+		$dbname = "database name";
+		//---------------------------------------------------------------------//
 		$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 		if(mysqli_connect_error())
 		{
@@ -118,11 +120,11 @@
 							$mail->Body = "Congratulation, {$name} and {$id} \t\t\t\t\n You are successfully registered in Line Follower in Purva 20.0";
 							if ($mail->send()) {
 								echo '<script language="javascript">';
-								echo 'alert("Purve20.0"+ "\n"  +  "Congrats your registration has been successfull"); window.location.href = "../techEvents.php"';
+								echo 'alert("Purve20.0"+ "\n"  +  "Congrats your registration has been successfull"); window.location.href = "../techEvents.html"';
 								echo '</script>';
 							} else {
 								echo '<script language="javascript">';
-								echo 'alert("Purve20.0"+ "\n"  +  "Oops Something went wrong, Please try after sometime"); window.location.href = "../techEvents.php"';
+								echo 'alert("Purve20.0"+ "\n"  +  "Oops Something went wrong, Please try after sometime"); window.location.href = "../techEvents.html"';
 								echo '</script>';
 							}
 							echo"success";
@@ -143,11 +145,11 @@
 							$mail->Body = "Congratulation, {$name} and {$id} \t\t\t\t\n You are successfully registered in Line Follower in Purva 20.0";
 							if ($mail->send()) {
 								echo '<script language="javascript">';
-								echo 'alert("Purve20.0"+ "\n"  +  "Congrats your registration has been successfull"); window.location.href = "../techEvents.php"';
+								echo 'alert("Purve20.0"+ "\n"  +  "Congrats your registration has been successfull"); window.location.href = "../techEvents.html"';
 								echo '</script>';
 							} else {
 								echo '<script language="javascript">';
-								echo 'alert("Purve20.0"+ "\n"  +  "Oops Something went wrong, Please try after sometime"); window.location.href = "../techEvents.php"';
+								echo 'alert("Purve20.0"+ "\n"  +  "Oops Something went wrong, Please try after sometime"); window.location.href = "../techEvents.html"';
 								echo '</script>';
 							}
 							echo"success";

@@ -2,10 +2,12 @@
 	if($_GET['en1']){
 		$email = decryptIt($_GET['en1']);
 		$table = 'festDetail';
-        $host = "localhost";
-		$dbusername = "root";
-		$dbpassword = "";
-		$dbname = "fest_registration";
+        //---------------------------------------------------------------------//
+		$host = "hostname";
+		$dbusername = "database username";
+		$dbpassword = "database password";
+		$dbname = "database name";
+		//---------------------------------------------------------------------//
 		$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 		if(mysqli_connect_error())
 		{
@@ -16,25 +18,26 @@
 			if ($conn->query($sql)) {
 				$result = $conn->query($sql);
 				$row = mysqli_fetch_array($result);
+                /*echo $row['email'];
+                echo $email;*/
 				if($row['emailVerification'] == "Not Verified"){
 					$sql1 = "UPDATE `".$table."` SET emailVerification = 'Verified' WHERE email = '$email'";
 					if($conn->query($sql1)){
 						echo '<script language="javascript">';
-						echo 'alert("Fest.0"+ "\n"  +  "Your email is verified successfully"); window.location.href = "email.html"';
+						echo 'alert("Fest.0"+ "\n"  +  "Your email is verified successfully"); window.location.href = "index.php"';
 						echo '</script>';
 						
 					}
 					else{
 						echo '<script language="javascript">';
-						echo 'alert("Fest.0"+ "\n"  +  "Ooops Something went wrong"); window.location.href = "index.html"';
+						echo 'alert("Fest.0"+ "\n"  +  "Ooops Something went wrong"); window.location.href = "index.php"';
 						echo '</script>';
 					}	
 				}
 				else{
 					echo '<script language="javascript">';
-					echo 'alert("Fest.0"+ "\n"  +  "Your email is already verified."); window.location.href = "index.html"';
+					echo 'alert("Fest.0"+ "\n"  +  "Your email is already verified."); window.location.href = "index.php"';
 					echo '</script>';
-					
 				}	
 			}
 			
@@ -46,7 +49,7 @@
 	}
 	else{
 		echo '<script language="javascript">';
-		echo 'alert("Blitzchlag20.0")';
+		echo 'alert("Purva20.0")';
 		echo 'alert("Please fill the registration form")';
 		echo '</script>';
 	}	

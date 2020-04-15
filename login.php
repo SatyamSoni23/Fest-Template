@@ -1,12 +1,15 @@
 <?php
+    ob_start();
 	$email = filter_input(INPUT_POST, 'email');
 	$password = encryptIt(filter_input(INPUT_POST, 'pass'));
 	$login = filter_input(INPUT_POST, 'login');
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
-		$host = "localhost";
-		$dbusername = "root";
-		$dbpassword = "";
-		$dbname = "fest_registration";
+		//---------------------------------------------------------------------//
+		$host = "hostname";
+		$dbusername = "database username";
+		$dbpassword = "database password";
+		$dbname = "database name";
+		//---------------------------------------------------------------------//
 		$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 		if(mysqli_connect_error())
 		{
@@ -27,7 +30,8 @@
 				$branch = $row['branch'];
 				$collegeName = $row['collegeName'];
 				$city = $row['city'];
-				$accommodation = $row['accommodation'];
+                $year = $row['year'];
+				$accommodation = $row['accommondation'];
 				$emailVerification = $row['emailVerification'];
 				session_start();
 				$_SESSION['id'] = $id;
@@ -44,13 +48,14 @@
 				$_SESSION['emailVerification'] = $emailVerification;
 				
 				echo '<script language="javascript">';
-				echo 'alert("Successfull login")';
+				echo 'alert("Successfull login"); window.location.href = "index.php"';
 				echo '</script>';
-				header('Location: index.php');
-				
+				//echo $_SESSION['name'];
 			}
 			else{
-				echo "Error: ". $sql1 ."<br>". $conn->error;
+				echo '<script language="javascript">';
+                echo 'alert("Wrong credential"); window.location.href = "login.php"';
+                echo '</script>';
 			}	
 		}
 		$conn->close();		

@@ -8,8 +8,8 @@
     $mail->Port = 587;
     $mail->SMTPSecure = 'tls';
     $mail->SMTPAuth = true; 
-    $mail->Username = "Your Email Id"; 
-    $mail->Password = "Password"; 
+    $mail->Username = "your email"; 
+    $mail->Password = "email password"; 
 	$name = filter_input(INPUT_POST, 'name');
 	$email = filter_input(INPUT_POST, 'email');
 	$gender = filter_input(INPUT_POST, 'gender');
@@ -25,11 +25,13 @@
 	$accommondation = filter_input(INPUT_POST, 'accommondation');
 	$register = filter_input(INPUT_POST, 'register');
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
-		$host = "localhost";
-		$dbusername = "root";
-		$dbpassword = "";
-		$dbname = "fest_registration";
+		//---------------------------------------------------------------------//
+		$host = "hostname";
+		$dbusername = "database username";
+		$dbpassword = "database password";
+		$dbname = "database name";
 		$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
+		//---------------------------------------------------------------------//
 		if(mysqli_connect_error())
 		{
 			die('Connect Error ('.mysqli_connect_error().')'.mysqli_connect_error());
@@ -40,7 +42,7 @@
 			if($college == "Other"){
 				$college = $collegeName;
 			}
-			$sql4 = "SELECT * FROM festDetail WHERE colid = '$colid' and email = '$email'";
+			$sql4 = "SELECT * FROM festDetail WHERE colid = '$colid' OR email = '$email'";
 			$result = $conn->query($sql4);
 			if($result->num_rows > 0){	
 				echo '<script language="javascript">';
@@ -63,7 +65,7 @@
 						$mail->setFrom('sat.test1000@gmail.com', 'Purva20.0'); 
 						$mail->addAddress($email, $name); 
 						$mail->Subject = 'Successfull Registration'; 
-						$mail->Body = "Congratulation, {$name} \t\t\t\t\n You are successfully registered in Purva20.0 \n\t\t your Purva20.0 Id is {$festId}  \n\t\t verify your email http://localhost/fest/email.php?en1={$en1}";
+						$mail->Body = "Congratulation, {$name} \t\t\t\t\n You are successfully registered in Purva20.0 \n\t\t your Purva20.0 Id is {$festId}  \n\t\t verify your email http://www.purva.epizy.com/email.php?en1={$en1}";
 						if ($mail->send()) {
 							echo "Congratulation, You are successfull registered in Purva20.0!";
 							header('Location: index.php');
@@ -79,9 +81,9 @@
 					}		
 				}
 				else{
-					$sql1 = "CREATE TABLE festDetail (id VARCHAR(12) NOT NULL DEFAULT '0', email VARCHAR(60) PRIMARY KEY, password VARCHAR(40), name VARCHAR(50), phone VARCHAR(13), colid VARCHAR(20), course varchar(40), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40), emailVerification varchar(30))";
+					$sql1 = "CREATE TABLE festDetail (id INT NOT NULL AUTO_INCREMENT, email VARCHAR(60) PRIMARY KEY, password VARCHAR(40), name VARCHAR(50), phone VARCHAR(13), colid VARCHAR(20), course varchar(40), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40), emailVerification varchar(30))";
 
-					$sql2 = "CREATE TABLE incFestDetail
+					/*$sql2 = "CREATE TABLE incFestDetail
 							(
 							  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 							);";
@@ -92,7 +94,8 @@
 							  INSERT INTO incFestDetail VALUES (NULL);
 							  SET NEW.id = CONCAT('fest@1', LPAD(LAST_INSERT_ID(), 3, '0'));
 							END";
-					if($conn->query($sql1) && $conn->query($sql2) && $conn->query($sql3)){
+                    */
+					if($conn->query($sql1)/* && $conn->query($sql2) && $conn->query($sql3)*/){
 						$sql4 = "INSERT INTO festDetail (email, password, name, phone, colid, course, year, branch, collegeName, city, accommondation, emailVerification)
 							values('$email', '$password', '$name', '$phone', '$colid', '$course', '$year', '$branch', '$college', '$city', '$accommondation', 'Not Verified');";
 						
@@ -107,7 +110,7 @@
 							$mail->setFrom('sat.test1000@gmail.com', 'Purve20.0'); 
 							$mail->addAddress($email, $name); 
 							$mail->Subject = 'Successfull Registration'; 
-							$mail->Body = "Congratulation, {$name} \t\t\t\t\n You are successfully registered in Purva20.0 \n\t\t your Purva20.0 Id is {$festId}  \n\t\t verify your email http://localhost/fest/email.php?en1={$en1}";
+							$mail->Body = "Congratulation, {$name} \t\t\t\t\n You are successfully registered in Purva20.0 \n\t\t your Purva20.0 Id is {$festId}  \n\t\t verify your email http://www.purva.epizy.com/email.php?en1={$en1}";
 							if ($mail->send()) {
 								echo "Congratulation, You are successfull registered in Purva20.0!";
 							} else {

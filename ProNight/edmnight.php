@@ -9,12 +9,12 @@
     $mail->Port = 587;
     $mail->SMTPSecure = 'tls';
     $mail->SMTPAuth = true; 
-    $mail->Username = "sat.test1000@gmail.com"; 
-    $mail->Password = "33404328"; 
+    $mail->Username = "your email"; 
+    $mail->Password = "email password"; 
 	
 	session_start();
 	$id = $_SESSION['id'];
-	if(!$id){
+	if(empty($id)){
 		header('Location: ../login.php');
 	}	
 	$email = $_SESSION['email'];

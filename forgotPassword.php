@@ -1,5 +1,4 @@
 <?php
-	ob_start();
 	date_default_timezone_set('Etc/UTC');
 	require 'PHPMailer/src/PHPMailer.php';
 	require("PHPMailer/src/SMTP.php");
@@ -9,14 +8,16 @@
     $mail->Port = 587;
     $mail->SMTPSecure = 'tls';
     $mail->SMTPAuth = true; 
-    $mail->Username = "sat.test1000@gmail.com"; 
-    $mail->Password = "33404328"; 
+    $mail->Username = "your email"; 
+    $mail->Password = "email password"; 
 	if (isset($_POST['sendOtp'])){
 		$email = filter_input(INPUT_POST, 'email');
-		$host = "localhost";
-		$dbusername = "root";
-		$dbpassword = "";
-		$dbname = "fest_registration";
+		//---------------------------------------------------------------------//
+		$host = "hostname";
+		$dbusername = "database username";
+		$dbpassword = "database password";
+		$dbname = "database name";
+		//---------------------------------------------------------------------//
 		$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 		
 		if(mysqli_connect_error())
@@ -62,10 +63,12 @@
 		$otp = $_POST['otp'];
 		$password = encryptIt($_POST['password']);
 		
-		$host = "localhost";
-		$dbusername = "root";
-		$dbpassword = "";
-		$dbname = "fest_registration";
+		//---------------------------------------------------------------------//
+		$host = "hostname";
+		$dbusername = "database username";
+		$dbpassword = "database password";
+		$dbname = "database name";
+		//---------------------------------------------------------------------//
 		$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 		if(mysqli_connect_error())
 		{
@@ -82,6 +85,8 @@
 					echo '<script language="javascript">';
 					echo 'alert("Your password has been successfully updated")';
 					echo '</script>';
+                    session_start();
+                    session_destroy();
 					header('Location: login.php');
 				}
 				else{

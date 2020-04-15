@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
@@ -162,9 +165,6 @@
       </div>
 
 	<?php
-		ob_start();
-		$login = filter_input(INPUT_POST, 'login');
-		session_start();
 		$username = $_SESSION['name'];
 		if(!empty($username)){
 			/*echo "<form method = 'post'><input type='submit' style = 'color:#fff; position: absolute; top:0; right: 0; background-color:#330702; font-family: serif; border-radius:5px; margin-top: 5px; margin-right: 5px;'value='Hello $username' name='logout'></form>";*/
