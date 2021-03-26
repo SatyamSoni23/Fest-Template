@@ -26,3 +26,12 @@ Demo link: http://purva.epizy.com/
 10. If you like to edit table names, id format as your wise,  you can edit at register.php.
 
 11. open any browser and type http://localhost/Fest-Template.
+
+# Screenshots
+
+![Image of adduser](https://github.com/SatyamSoni23/Fest-Template/blob/master/Screenshots/home1.JPG)
+![Image of adduser](https://github.com/SatyamSoni23/Fest-Template/blob/master/Screenshots/home2.JPG)
+![Image of adduser](https://github.com/SatyamSoni23/Fest-Template/blob/master/Screenshots/home3.JPG)
+![Image of adduser](https://github.com/SatyamSoni23/Fest-Template/blob/master/Screenshots/home4.JPG)
+![Image of adduser](https://github.com/SatyamSoni23/Fest-Template/blob/master/Screenshots/login.JPG)
+![Image of adduser](https://github.com/SatyamSoni23/Fest-Template/blob/master/Screenshots/shows2.JPG)
