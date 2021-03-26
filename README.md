@@ -11,21 +11,21 @@ Demo link: http://purva.epizy.com/
 
 3. Download project from github(https://github.com/SatyamSoni23/Fest-Template) 
     
-4. extract files in C:\\xampp\htdocs\.
+4. Extract files in C:\\xampp\htdocs\.
 
-5. open link localhost/phpmyadmin
+5. Open link localhost/phpmyadmin
 
-6. click on new at side navbar.
+6. Click on new at side navbar.
 
-7. give your a database name example "abc" as  hit on create button.
+7. Give your a database name example "abc" as  hit on create button.
 
-8. after creating database name.
+8. After creating database name.
 
 9. Edit database name, host name, database username, database password in login.php and register.php
 
 10. If you like to edit table names, id format as your wise,  you can edit at register.php.
 
-11. open any browser and type http://localhost/Fest-Template.
+11. Open any browser and type http://localhost/Fest-Template.
 
 # Screenshots
 
